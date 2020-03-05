@@ -8,14 +8,16 @@ Blueberry sends data across at either 100Hz or 50Hz sample rate, check the onboa
 To connect to blueberry use the following characteristics:
 ---
 
+```
 //bluetooth
 public static let ACCESSORY_NAME = "blubry"
 public static let FNIRS_SERVICE = CBUUID.init(string:"0f0e0d0c-0b0a-0908-0706-050403020100")
 public static let FNIRS_WRITE = CBUUID.init(string:"1f1e1d1c-1b1a-1918-1716-151413121110")
 public static let FNIRS_READ = CBUUID.init(string:"3f3e3d3c-3b3a-3938-3736-353433323130")
-    
-To setup a connection to get raw data here is a sample snippet using corebooth:
+```
 
+To setup a connection to get raw data here is a sample snippet using corebooth:
+---
 ```
 func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
     if peripheral == self.peripheral {
